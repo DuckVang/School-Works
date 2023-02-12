@@ -1,0 +1,69 @@
+@use "./colors";
+@use "./font-size";
+%create-button {
+    &:hover {
+        background-color: lighten(colors.$green, 10%);
+    }
+    border-radius: 6px;
+    color: colors.$white;
+    background-color: colors.$green;
+    padding-inline: 12px;
+    padding-block: 6px;
+    vertical-align: middle;
+    line-height: 15px;
+    font-size: font-size.$button;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+%search-bar {
+    all: unset;
+    box-sizing: border-box;
+    max-width: 100%;
+    background-color: colors.$search;
+    border: 1px solid colors.$search-border;
+    border-radius: 5px;
+    padding-inline: 16px;
+    padding-block: 3px;
+    font-size: font-size.$search;
+    color: colors.$font-grey2;
+
+    &:focus {
+       border: 1px solid colors.$blue;
+       
+        
+    }
+}
+
+%custom-radio-button {
+    appearance: none;
+    min-width: 16px;
+    height: 16px;
+    border: 1px solid #555555;
+    border-radius: 50%;
+    background-clip: content-box;
+    padding: 2px;
+    accent-color: colors.$font-grey;
+    &:hover{
+        cursor: pointer;
+    }
+    &:checked {
+        border-color: colors.$blue;
+        background-color: colors.$blue;
+    }
+}
+%profile-picture{
+    &::before {
+        content: "";
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        background-image: url("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png");
+        background-size: contain;
+    }
+
+}
