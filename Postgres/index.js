@@ -11,7 +11,7 @@ const client = new pg.Client({ // pozor na importování modulu pg
 async function start() {
 
     await client.connect()
-    const result = await client.query('SELECT * FROM user;');
+    const result = await client.query('');
 
     const users = result.rows;
 

@@ -40,7 +40,7 @@ export default {
 </template>
 
 <style scoped>
-<
+
 header{
 
   display: flex;

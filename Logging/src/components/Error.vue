@@ -10,6 +10,6 @@ export default {
 </script>
 
 <template>
-    <button @click="handle"></button>
+    <button @click="handle">Chyba</button>
 </template>
 
