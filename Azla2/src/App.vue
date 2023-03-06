@@ -1,11 +1,9 @@
 <script setup>
-import AddItemForm from './components/AddItemForm.vue'
+import AddItemForm from "./components/AddItemForm.vue";
 </script>
 
 <template>
-  <AddItemForm></AddItemForm>
+  <AddItemForm />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

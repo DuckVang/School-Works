@@ -1,6 +1,6 @@
-<script setup>
-import { defineStore } from "pinia";
 
+import { defineStore } from "pinia";
+import { ref } from "vue";
 export const useTagsStore = defineStore("tags", () => {
   const tags = ref([]);
   function addTags(params) {
@@ -11,4 +11,4 @@ export const useTagsStore = defineStore("tags", () => {
     addTags,
   };
 });
-</script>
+

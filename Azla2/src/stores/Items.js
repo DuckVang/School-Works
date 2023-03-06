@@ -1,6 +1,6 @@
-<script setup>
-import { defineStore } from "pinia";
 
+import { ref } from "vue";
+import { defineStore } from "pinia";
 export const useItemsStore = defineStore("items", () => {
   const items = ref([]);
   function addItem(params) {
@@ -11,4 +11,4 @@ export const useItemsStore = defineStore("items", () => {
     addItem,
   };
 });
-</script>
+
