@@ -1,9 +1,11 @@
 <script setup>
 import { reactive } from "vue";
 import {useTagsStore} from "../stores/Tags";
+import {useItemsStore} from "../stores/Items";
 
 
 const tags = useTagsStore().tags;
+const items = useItemsStore();
 const data = reactive({
   name: "",
   price: "",
@@ -11,7 +13,7 @@ const data = reactive({
   selected: [],
 });
 function handleClick() {
-  console.log(data);
+  items.addItem(data)
 }
 
 
