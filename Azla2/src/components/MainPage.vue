@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import ProductList from './components/ProductList.vue'
+import ProductsList from './ProductsList.vue'
 defineProps({
   msg: String,
 })
@@ -9,8 +9,8 @@ const count = ref(0)
 </script>
 
 <template>
-  <ProductList>
-  
+  <ProductsList />
+
 </template>
 
 <style  scoped lang="scss">

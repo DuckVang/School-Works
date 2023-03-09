@@ -1,24 +1,22 @@
 <script setup>
-import { ref } from 'vue'
-import Item from './components/Item.vue'
-import useItemsStore from './stores/Items'
+import { ref } from "vue";
+import Product from "./Product.vue";
+import {useItemsStore} from "../stores/Items.js";
 
 defineProps({
   msg: String,
-})
+});
 
-const count = ref(0)
-const items = useItemsStore().items
+const count = ref(0);
+const items = useItemsStore().items;
 </script>
 
 <template>
   <div class="products">
-    <div v.v-for="(item, index) in items" :key="index">
-      <Item ></Item>
+    <div v-for="(item, index) in items" :key="index">
+      <Product :data="item"></Product>
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
