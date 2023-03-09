@@ -1,8 +1,7 @@
 <script setup>
-import { reactive } from "vue";
-import {useTagsStore} from "../stores/Tags";
-import {useItemsStore} from "../stores/Items";
-
+import { reactive, toRaw } from "vue";
+import { useTagsStore } from "../stores/Tags";
+import { useItemsStore } from "../stores/Items";
 
 const tags = useTagsStore().tags;
 const items = useItemsStore();
@@ -13,10 +12,9 @@ const data = reactive({
   selected: [],
 });
 function handleClick() {
-  items.addItem(data)
+  const obj = toRaw(data);
+  items.addItem({ ...obj });
 }
-
-
 </script>
 
 <template>
@@ -25,7 +23,7 @@ function handleClick() {
     <input v-model="data.price" placeholder="price" />
     <input v-model="data.description" placeholder="description..." />
     <select v-model="data.selected" multiple>
-      <option v-for="tag in tags">{{ tag }}</option>
+      <option :v-for="tag in tags">{{ tag }}</option>
     </select>
     <button @click="handleClick()">Add</button>
   </div>
