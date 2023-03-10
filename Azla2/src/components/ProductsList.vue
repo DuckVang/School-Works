@@ -12,7 +12,7 @@ const items = useItemsStore().items;
 </script>
 
 <template>
-  <div class="products">
+  <div class="products-list">
     <div v-for="(item, index) in items" :key="index">
       <Product :data="item"></Product>
     </div>

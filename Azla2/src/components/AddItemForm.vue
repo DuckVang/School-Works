@@ -18,7 +18,7 @@ function handleClick() {
 </script>
 
 <template>
-  <div>
+  <div class="add-form">
     <input v-model="data.name" placeholder="name" />
     <input v-model="data.price" placeholder="price" />
     <input v-model="data.description" placeholder="description..." />

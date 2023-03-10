@@ -4,17 +4,11 @@ import MainPage from "./components/MainPage.vue";
 </script>
 
 <template>
-  <AddItemForm />
-  <MainPage />
+  <div id="app">
+    <AddItemForm />
+    <MainPage />
+  </div>
 </template>
 
 <style>
-#app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-#app > * {
-  flex: 1;
-}
 </style>
