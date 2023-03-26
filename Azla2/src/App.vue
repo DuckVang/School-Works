@@ -4,10 +4,10 @@ import MainPage from "./components/MainPage.vue";
 </script>
 
 <template>
-  <div id="app">
-    <AddItemForm />
+
+    <!-- <AddItemForm /> -->
     <MainPage />
-  </div>
+  
 </template>
 
 <style>
